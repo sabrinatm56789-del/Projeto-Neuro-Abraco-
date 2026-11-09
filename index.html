@@ -1,0 +1,408 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neuro Abraço</title>
+    <style> /* Oculta todas as páginas por padrão */ /* Exibe apenas a página inicial ao carregar */
+    .pagina { display: none; }
+    #index  { display: flex; }
+    </style>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/logo-neuroabraco.png">
+</head>
+<body>
+<header> 
+  <nav class="navbar">
+    <div class="logo-area" onclick="mostrarPagina('index')" style="cursor: pointer;"> <!-- Logo clicável que redireciona para a página inicial -->
+    <img src="img/logo-neuroabraco.png" alt="Logo Neuro Abraço">
+    <span class="site-name">Neuro abraço</span>
+    </div>
+    <ul class="nav-links"> <!-- Links de navegação — cada um chama mostrarPagina() -->
+      <li><a href="#" onclick="mostrarPagina('index')">home</a></li>
+      <li><a href="#" onclick="mostrarPagina('servicos')">serviços</a></li>
+      <li><a href="#" onclick="mostrarPagina('quem-somos')">quem somos</a></li>
+      <li><a href="#" onclick="mostrarPagina('contato')">contato</a></li>
+    </ul>
+  </nav>
+</header>
+
+  <main>
+    <section id="index" class="pagina">
+  <div class="index-container">
+    <div class="index-texto"> <!-- Bloco de texto e botões do lado esquerdo -->
+      <h1>Bem-vindo ao universo de mentes únicas</h1>
+      <p>
+        O autismo é uma condição do desenvolvimento que influencia a forma como a pessoa se comunica, interage e percebe o mundo. 
+        Cada indivíduo autista é único. Aqui você encontra informações sobre locais em São Paulo de atendimento, atividades inclusivas 
+        e orientações sobre os níveis de suporte, sempre com o objetivo de promover bem-estar, inclusão e qualidade de vida.
+      </p>
+      <div class="index-botoes"> <!-- Botões -->
+        <a href="#" onclick="mostrarPagina('servicos')" class="btn">Nossos Serviços</a>
+        <a href="#" onclick="mostrarPagina('contato')" class="btn btn-secundario">Entre em Contato</a>
+      </div>
+    </div>
+
+    <div class="index-imagem">
+      <img src="img/logo-neuroabraco.png" alt="Logo Neuro Abraço">
+    </div>
+  </div>
+</section>
+  <!-- FIM: #index -->
+  <!-- INICIO: Serviços -->
+    <section id="servicos" class="pagina" style="display:none;">
+  <div class="servicos-container">
+    <h1>O que você precisa?</h1>
+
+ <div class="servicos-grid">  <!-- Grade de cards — layout definido em .servicos-grid no style.css -->
+
+  <div class="card-servico" onclick="mostrarPagina('suporte')">
+    <img src="img/bg1-niveis.jpg" alt="Níveis de suporte">
+    <div class="card-conteudo">
+      <h3>Níveis de suporte</h3>  <!-- Card 1: Níveis de Suporte -->
+      <p>
+        Informações básicas sobre os níveis 1, 2 e 3 de suporte
+        e como cada um influencia as necessidades da pessoa autista.
+      </p>
+    </div>
+  </div>
+
+  <div class="card-servico" onclick="mostrarPagina('locais')">   <!-- Card 2: Locais de Atendimento Especializado -->
+    <img src="img/bg2-esp.jpg" alt="Locais de atendimento especializado">
+    <div class="card-conteudo">
+      <h3>Locais de Atendimento Especializado</h3>
+      <p>
+        Endereços e instituições em São Paulo que oferecem acompanhamento especializado para pessoas autistas e suas famílias.
+      </p>
+    </div>
+  </div>
+
+  <div class="card-servico" onclick="mostrarPagina('atividades')">  <!-- Card 3: Atividades Inclusivas e Lazer -->
+    <img src="img/bg3-parque.jpg" alt="Atividades inclusivas e lazer">
+    <div class="card-conteudo">
+      <h3>Atividades Inclusivas e Lazer</h3>
+      <p>
+        Sugestões de parques, oficinas e eventos culturais que promovem para todos uma inclusão e diversão garantida.
+      </p>
+    </div>
+  </div>
+
+  <div class="card-servico" onclick="mostrarPagina('alimentacao')"> <!-- Card 4: Informações Alimentares -->
+    <img src="img/bg4-alimento.jpg" alt="Informações alimentares">
+    <div class="card-conteudo">
+      <h3>Informações Alimentares</h3>
+      <p>
+        Dicas sobre alimentação saudável e adaptada às necessidades de pessoas autistas, com foco em bem-estar.
+      </p>
+    </div>
+  </div>
+  </div>
+
+</div>
+</section>
+<!-- FIM: #servicos -->
+
+
+<!-- paginas de cada um dos serviços, para criar um novo basta copiar e colar, substituir os nomes das classes e as infos -->
+  <section id="suporte" class="pagina" style="display:none;">
+    <button class="btn-voltar" onclick="mostrarPagina('servicos')">← Voltar aos Serviços</button>
+    <h1>Níveis de Suporte no TEA</h1> <!-- texto do começo!-->
+    <p class="suporte-subtitulo">
+      Os níveis de suporte no Transtorno do Espectro Autista (TEA), estabelecidos pelo DSM-5 (Manual Diagnóstico e Estatístico de Transtornos Mentais), não medem a gravidade da inteligência ou a capacidade verbal, mas sim a quantidade de apoio necessário que uma pessoa autista precisa para funcionar no dia a dia. O espectro é dividido em três níveis, focando nas áreas de comunicação social e comportamentos restritos/repetitivos. 
+    </p>
+
+    <!-- Grade com os 3 cards de nível — layout em .niveis-grid no style.css -->
+    <div class="niveis-grid"> 
+
+      <div class="nivel-card nivel-1"> <!-- Nível 1: Leve -->
+        <span class="nivel-badge">Nível 1</span>
+        <h2>Necessitando de apoio - Leve</h2>
+        <p>A pessoa apresenta dificuldades que se tornam aparentes sem suporte, mas consegue se comunicar verbalmente e tem maior independência.</p>
+        <ul>
+          <li><strong>Comunicação Social:</strong> Pode ter dificuldades em iniciar interações sociais, 
+          conversas, e fazer amigos. A fala pode ser funcional, mas o entendimento de 
+          nuances sociais é limitado.</li>
+          <li><strong>Comportamento:</strong> A rigidez comportamental causa interferência significativa 
+          em um ou mais contextos. Dificuldade em organizar e planejar atividades, 
+          além de inflexibilidade para mudar de foco ou ação.</li>
+          <li><strong>Suporte:</strong> Requer apoio para lidar com desafios sociais e organizacionais, 
+          mas geralmente tem autonomia. </li>
+        </ul>
+      </div>
+
+      <div class="nivel-card nivel-2"> <!-- Nível 2: Moderado -->
+        <span class="nivel-badge">Nível 2</span>
+        <h2>Necessitando de apoio substancial - Moderado</h2>
+        <p>A pessoa necessita de suporte mais consistente. As dificuldades são mais evidentes mesmo com apoio instalado.</p>
+        <ul>
+          <li><strong>Comunicação Social:</strong> Apresenta dificuldades mais marcadas na 
+          comunicação verbal e não verbal. A interação social é limitada a interesses 
+          muito específicos e há notável déficit na resposta social.</li>
+          
+          <li><strong>Comportamento:</strong> Comportamentos inflexíveis, rigidez comportamental e 
+          dificuldades em lidar com a mudança são mais frequentes e evidentes, 
+          interferindo em diversas situações.</li>
+          
+          <li><strong>Suporte:</strong> Exige apoio substancial e constante para a vida cotidiana e 
+          atividades diárias.</li>
+        </ul>
+      </div>
+
+      <div class="nivel-card nivel-3"> <!-- Nível 3: Severo/Grave -->
+        <span class="nivel-badge">Nível 3</span>
+        <h2>Suporte Muito Substancial - Severo/Grave</h2>
+        <p>A pessoa necessita de suporte intensivo em todas as áreas. As dificuldades causam impacto significativo no funcionamento diário.</p>
+        <ul>
+          <li><strong>Comunicação Social:</strong> Déficits graves nas habilidades de comunicação social 
+          verbal e não verbal. Muitas vezes, a pessoa é não verbal ou usa fala 
+          funcional muito limitada, com interações sociais mínimas. </li>
+          
+          <li><strong>Comportamento:</strong> Extrema dificuldade em lidar com mudanças. Grande 
+          rigidez comportamental, fixação em comportamentos atípicos e alto nível de 
+          angústia quando as rotinas são alteradas.</li>
+          
+          <li><strong>Suporte:</strong> Exige apoio muito substancial e intensivo, pois a autonomia é 
+          bastante limitada.</li>
+          
+          <li><strong>Os níveis não são fixos:</strong> Uma pessoa pode evoluir e precisar de menos 
+          suporte ao longo do tempo com as terapias corretas (como ABA, 
+          Fonoaudiologia, Terapia Ocupacional).</li>
+          
+          <li><strong>Independência:</strong> O objetivo do suporte é aumentar a autonomia e qualidade 
+          de vida da pessoa autista. </li>
+          
+          <li><strong>Variabilidade:</strong> Cada indivíduo dentro do mesmo nível pode apresentar 
+          características e necessidades diferentes. </li>
+          
+          <li><strong>Triagem e Intervenção:</strong> O diagnóstico precoce e a intervenção precoce 
+          (inclusive envolvendo os pais) são fundamentais.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="suporte-nota"> <!-- Observações gerais sobre o espectro — aplicáveis a todos os níveis (rodape)-->
+      <strong>Importante:</strong> Os níveis de suporte não definem a capacidade ou o potencial da pessoa autista.
+      São uma ferramenta clínica para orientar o cuidado. Cada pessoa é única e pode ter características de mais de um nível
+      dependendo do contexto. O diagnóstico deve ser feito por profissionais especializados.
+    </div>
+  </section>
+
+ <!-- FIM: .niveis-grid -->
+
+  
+<!-- coloque aqui a aba de atendimentos copiando e substituindo as classes e as infos -->
+  <section id="locais" class="pagina" style="display:none;">
+    <button class="btn-voltar" onclick="mostrarPagina('servicos')">← Voltar aos Serviços</button>
+    <h1>Locais de Atendimento especializados</h1> <!-- texto do começo!-->
+    <p class="suporte-subtitulo">
+      São Paulo é uma cidade com uma rede diversificada de serviços especializados para pessoas autistas e suas famílias. 
+      Abaixo estão listados alguns dos principais locais de atendimento, incluindo clínicas, centros de diagnóstico, instituições de apoio e grupos de suporte. 
+      É importante entrar em contato diretamente com cada instituição para obter informações atualizadas sobre os serviços oferecidos, horários de atendimento e critérios de acesso.
+    </p>
+    <div class="locais-categoria"> <!-- Categoria: locais especializados -->
+        <h2>Locais especializados na região de São Paulo</h2>
+        <div class="locais-lista">
+          <div class="locais-item">
+            <h4>CAPSi (Centro de Atenção Psicossocial Infantojuvenil)</h4>
+            <p>Foco de Atuação: Casos de TEA que apresentam sofrimento psíquico intenso, crises graves ou comorbidades psiquiátricas complexas (como agressividade severa ou autoagressão). Trabalham no modelo de "porta aberta" (você pode ir diretamente sem encaminhamento para uma triagem). Ele não foca apenas na terapia individual clássica, mas sim na reinserção social e no fortalecimento familiar.</p>
+            <p>Profissionais: Psiquiatras infantis, psicólogos, terapeutas ocupacionais, enfermeiros e assistentes sociais.</p>
+          </div>
+          <div class="locais-item">
+            <h4>CER (Centro Especializado em Reabilitação)</h4>
+            <p>Foco de Atuação: Habilitação e reabilitação do neurodesenvolvimento. É o local ideal para o desenvolvimento de fala, coordenação motora, habilidades sociais e autonomia para as atividades do dia a dia. Diferente do CAPSi, o acesso ao CER 
+            exige encaminhamento médico (geralmente feito pelo pediatra ou clínico geral da Unidade Básica de Saúde - UBS).</p>
+            <p>Profissionais: Fonoaudiólogos, terapeutas ocupacionais (frequentemente com integração sensorial), fisioterapeutas, psicólogos e neuropediatras.</p>
+          </div>
+          <div class="locais-item">
+            <h4>AMA (Associação de Amigos do Autista)</h4>
+            <p>Foco de Atuação: Atendimento educacional especializado e terapêutico para pessoas com TEA em todos os níveis de suporte, desde crianças até adultos. O atendimento é 100% gratuito através de convênios com as Secretarias de Saúde e Educação. Por ser um serviço altamente especializado e gratuito, costuma ter listas de espera longas.</p>
+            <p>Critério de Acesso: Para as unidades de São Paulo, por exemplo, a criança precisa estar matriculada na rede pública de ensino e obter um encaminhamento oficial através da Diretoria de Ensino ou da Secretaria de Saúde.</p>
+          </div>
+        </div>
+        </div>
+  </section>
+<!-- subpagina de lazer -->
+<section id="atividades" class="pagina">
+  <div class="detalhe-container">
+    <button class="btn-voltar" onclick="mostrarPagina('servicos')">← Voltar aos Serviços</button>
+    <h1>Atividades Inclusivas e Lazer em São Paulo</h1>
+    <p class="detalhe-intro">
+      Lazer e cultura são direitos de todos. São Paulo oferece espaços e eventos pensados para
+      proporcionar experiências prazerosas e seguras para pessoas autistas e suas famílias.
+    </p>
+  </div>
+
+    <div class="atividades-categorias">
+
+      <div class="atividade-categoria"> <!-- Categoria 1: Parques -->
+        <h2>Parques e Espaços ao Ar Livre</h2>
+        <div class="atividade-lista">
+          <div class="atividade-item">
+            <h4>Parque Estadual da Cantareira</h4>
+            <p>Amplo espaço verde com trilhas tranquilas, ideal para quem aprecia ambientes naturais e
+            com menos estímulos sonoros urbanos.</p>
+          </div>
+          <div class="atividade-item">
+            <h4>Parque Aclimação</h4>
+            <p>Possui zoológico de pássaros, espaço amplo e áreas sombreadas. Boa opção para passeios
+            em horários menos movimentados.</p>
+          </div>
+          <div class="atividade-item">
+            <h4>Parque Villa-Lobos</h4>
+            <p>Espaço amplo com ciclovia, campo e áreas de descanso. Tranquilo em dias de semana.</p>
+          </div>
+        </div>
+        </div>
+      </div>
+
+      <div class="atividade-categoria"> <!-- Categoria 2: Cultura e Entretenimento -->
+        <h2>Cultura e Entretenimento</h2>
+        <div class="atividade-lista">
+          <div class="atividade-item">
+            <h4>Sessões Adaptadas no Cinema</h4>
+            <p>Diversas redes (Cinemark, Cinépolis, Cinemaximo) oferecem sessões com som reduzido,
+            iluminação parcial e ambiente mais relaxado. Consulte a programação no site de cada rede.</p>
+          </div>
+          <div class="atividade-item">
+            <h4>Museu Catavento Cultural</h4>
+            <p>Museu de ciências interativo que frequentemente oferece visitas adaptadas para pessoas
+            com TEA, com agendamento prévio.</p>
+            <p><strong>Endereço: </strong> Av. Mercúrio, s/n — Brás, SP</p>
+          </div>
+            
+          <div class="atividade-item">
+            <h4>Museu da Imaginação</h4>
+            <p>O Museu da Imaginação promove diversas atividades que estimulam as crianças a colocarem a mão na massa. Oferece oficinas de robótica, oficinas artísticas, apresentações científicas e muito mais!</p>
+            <p><strong>Endereço: </strong>Rua Virgilio Wey, 100 - Água Branca, São Paulo - SP</p>
+          </div>
+          <div class="atividade-item">
+            <h4>Parque da Mônica</h4>
+            <p> O Parque da Mônica é o parque temática da Turma da Mônica e conta com entrada gratuita para autistas até 17 anos (através de parceria) e, geralmente, um acompanhante paga meia. Possui sala silenciosa e abafadores.</p>
+            <p><strong>Endereço: </strong>Av. das Nações Unidas, 22540 - Jurubatuba, São Paulo - SP</p>
+          </div>
+          <div class="atividade-item">
+            <h4>Cidade da Criança (SBC)</h4>
+            <p>A Cidade da Criança é um parque de diversões brasileiro localizado no centro da cidade de São Bernardo do Campo, na região metropolitana de São Paulo. </p>
+            <p><strong>Endereço: </strong>R. Tasman, 600 - Jardim do Mar, São Bernardo do Campo - SP</p>
+            <!-- FIM: Categoria 2 -->
+          </div>
+        </div>
+      </div>
+<!-- Aviso/dica de planejamento para passeios -->
+    <div class="detalhe-aviso">
+      <strong>Planejando a saída:</strong> Verifique se está levando a documentação como laudo médico e carterinha PCD. Sempre que possível, visite o local antes em horários tranquilos, leve itens de conforto sensorial (fones abafadores, brinquedos fidget) e informe os responsáveis do espaço sobre as necessidades específicas. Muitos locais têm equipes preparadas para ajudar!
+    </div>
+  </div>
+</section>
+
+<!-- coloque aqui a aba de alimentaçao repetindo o mesmo processo de copiar e colar, substituir classes e infos -->
+  <section id="alimentacao" class="pagina" style="display:none;">
+    <button class="btn-voltar" onclick="mostrarPagina('servicos')">← Voltar aos Serviços</button>
+    <h1>Alimentação Especializada</h1> <!-- texto do começo!-->
+    <p class="suporte-subtitulo">
+      A alimentação de pessoas autistas pode apresentar desafios específicos, como seletividade alimentar, preferências por texturas ou sabores específicos e dificuldades sensoriais. É importante buscar orientação de profissionais especializados, como nutricionistas e terapeutas ocupacionais, para desenvolver estratégias que promovam uma alimentação equilibrada e adaptada às necessidades individuais, garantindo o bem-estar e a saúde da pessoa autista.
+    </p>
+    <div class="alimentacao-categoria"> <!-- Categoria: Nutição -->
+        <h2>Nutrição e TEA: Estratégias para Seletividade e Saúde Intestinal</h2>
+        <div class="alimentacao-lista">
+          <div class="alimentacao-item">
+            <h4> Desafios Comuns na Alimentação</h4>
+            <p>Seletividade alimentar extrema: Preferência rígida por determinadas cores, formatos, marcas ou temperaturas.</p>
+            <p>Hipersensibilidade sensorial: Rejeição de alimentos devido a texturas específicas (pastosos, crocantes), cheiros ou sabores intensos.</p>
+            <p>Problemas gastrointestinais: Alta incidência de constipação, diarreia, refluxo e dores abdominais..</p>
+          </div>
+          <div class="alimentacao-item">
+            <h4>Estratégias Nutricionais Clínicas</h4>
+            <p>Abordagem Fresh & In Natura: Priorização de alimentos frescos e redução drástica de ultraprocessados, corantes, conservantes e açúcares refinados.</p>
+            <p>Dietas de exclusão (sob supervisão): Protocolos como a dieta sem glúten e sem caseína (SGSC) ou dieta cetogênica ajudam a reduzir sintomas em um subgrupo de crianças, mas só devem ser feitas com acompanhamento rigoroso para evitar desnutrição.</p>
+            <p>Suplementação direcionada: Investigação de carências comuns e reposição orientada de Vitamina D, Ômega-3, Ferro, Zinco e Vitaminas do complexo B.</p>
+          </div>
+          <div class="alimentacao-item">
+            <h4>Como Trabalhar a Seletividade em Casa</h4>
+            <list>
+              <li><strong>Exposição gradual:</strong> Introdução lenta e repetida de novos alimentos, sem pressão, para aumentar a aceitação.</li>
+              <li><strong>Modelagem alimentar:</strong> Pais e familiares consumindo os mesmos alimentos para incentivar a experimentação.</li>
+              <li><strong>Apresentação criativa:</strong> Uso de formatos divertidos, cores variadas e pratos visualmente atraentes para despertar o interesse.</li>
+              <li><strong>Rotina alimentar:</strong> Estabelecer horários regulares para as refeições, criando previsibilidade e segurança.</li>
+            </list>
+          </div>
+           <div class="detalhe-aviso">
+      <strong>Importante:</strong> Qualquer mudança na dieta deve ser acompanhada por um nutricionista materno-infantil especializado em TEA e por um fonoaudiólogo ou terapeuta ocupacional com foco em integração sensorial, para garantir que as necessidades nutricionais sejam atendidas e que a alimentação seja prazerosa e adaptada às preferências sensoriais da pessoa autista.
+    </div>
+        </div>
+        </div>
+  </section>
+
+  <!--Nosso contato -->
+<section id="contato" class="pagina" style="display:none;">
+
+  <div class="cx-principal">
+    <h1>Contato</h1>
+    <p>Entre em contato com o projeto ou diretamente com os membros da equipe.</p>
+
+    <div class="card-contato">    
+      <h3>Contato do projeto:</h3>
+      <p>neuroabracofmu@gmail.com</p>
+    </div>
+  </div>
+
+  <div class="cx-membros">
+    <h1>Contato dos membros</h1>
+    <div class="card-name">    
+      <ul>
+        <li class="membro">
+          <span class="nome">Nadia</span>
+          <span class="email">rtv.nadia@gmail.com</span>
+        </li>
+
+        <li class="membro">
+          <span class="nome">Robson Junior</span>
+          <span class="email">fariasjuniorrobson@gmail.com</span>
+        </li>
+             <li class="membro">
+            <span class="nome">Pedro Henrique</span>
+            <span class="email">pehenriquepereira1@gmail.com</span>
+        </li>
+             <li class="membro">
+            <span class="nome">Thais Santos</span>
+            <span class="email">Thaismarketingfno@gmail.com</span>
+        </li>
+             <li class="membro">
+            <span class="nome">Caio Guimaraes</span>
+            <span class="email">naroga.adm@gmail.com</span>
+        </li>
+             <li class="membro">
+            <span class="nome">Sabrina</span>
+            <span class="email">sabrinatm56789@gmail.com</span>
+        </li>
+             <li class="membro">
+            <span class="nome">Nadia</span>
+            <span class="email">rtv.nadia@gmail.com</span>
+        </li>           
+        </ul>
+    </div>
+    </div>
+    </section>
+    <section id="quem-somos" class="pagina">
+
+    <div class="cxa-quem-somos">
+        <h1>Quem Somos</h1>
+        <p>Somos uma equipe formada a partir de um projeto acadêmico desenvolvido no primeiro semestre do curso de Análise e Desenvolvimento de Sistemas da FMU, em São Paulo.</p>
+    </div>
+    </section>
+
+</main>
+<!-- rodape !-->
+<footer>
+  <div class="footer-content">
+    <p>&copy; 2026 Neuro Abraço - Todos os direitos reservados</p>
+    <p>Email: neuroabracofmu@gmail.com | São Paulo - Brasil</p>
+  </div>
+</footer>
+
+<!-- Script principal: contém a função mostrarPagina() que controla toda a navegação entre as seções da página -->
+<script src="main.js"></script>
+
+</body>
+</html>
